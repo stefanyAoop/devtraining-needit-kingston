@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="needitt" max_length="40" name="x_58872_needit_needitt" sizeclass="3" type="collection">
+        <element label="Solicitado para" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="tipo de solicitação" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="human Resources" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Your Departament Choice" sequence="3" value="your_choice"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="legal 1" label="O que é necessário" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="recursos Humanos 1" sequence="0" value="hr1"/>
+                <element inactive_on_update="false" label="recursos humanos 2" sequence="1" value="hr2"/>
+                <element inactive_on_update="false" label="Instalação 1" sequence="2" value="facilities1"/>
+                <element inactive_on_update="false" label="Instalação 2" sequence="3" value="facilities2"/>
+                <element inactive_on_update="false" label="Legal 1" sequence="4" value="legal 1"/>
+                <element inactive_on_update="false" label="Legal 2" sequence="5" value="legal 2"/>
+                <element inactive_on_update="false" label="Sua escolha do departamento" sequence="6" value="your_choice1"/>
+                <element inactive_on_update="false" label="Sua escolha do departamento" sequence="7" value="your_choice2"/>
+            </choice>
+        </element>
+        <element label="quando necessário" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
